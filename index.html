@@ -47,7 +47,7 @@
 
 	</form>
 
-	<div id="room-list"></div>
+	<div id="room-list" class="panel-group" role="tablist"></div>
 	</div>
 	<script>
 	$(document).ready(function(){
@@ -55,14 +55,30 @@
 
 		$.getJSON('https://cyoon84.github.io/room-booking-sep8/rooms.json', function(roomdata){
 		console.log(roomdata);
-		  var $ul = $('<ul>').addClass('list-group');
-		  $.each(roomdata.rooms, function(idx, obj){
-		  	console.log(obj);
-		    $ul.append(
-		    	$("<li>").addClass('list-group-item').html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap).data("minCap",obj.minCap).data("maxCap", obj.maxCap).data("roomName",obj.room)
+    var $panelGroup = $('<div>').addClass('panel-group');
+		$.each(roomdata.rooms, function(idx, obj){
+      console.log(obj);
+		  $panelGroup.append(
+		    	$("<div>").addClass('panel panel-default').
+          data("minCap",obj.minCap).
+          data("maxCap", obj.maxCap).
+          data("roomName",obj.room).
+          append(
+            $("<div>").addClass('panel-heading').append(
+              $('<h4>').addClass('panel-title').append(
+                $("<a>").attr({
+                  'role' : 'button',
+                  'data-toggle' : 'collapse',
+                  'data-parent' : '#room-list-accordion',
+                  'href' : '#collapse-'+idx
+                }).html(obj.room)
+              )
+            ),
+            $("<div>").addClass('panel-collapse collapse').html('description')
+          )  
 		    );
 		  });
-		  $("#room-list").append($ul);
+		  $("#room-list").append($panelGroup);
 		});
 
 		$('#group-size').change(function(event) {
@@ -84,7 +100,7 @@
 		});
 		
     $('#room-list').on('click', '.list-group-item', function(evt){
-      alert('show details of room ' + $(this).data('roomName'))
+      //alert('show details of room ' + $(this).data('roomName'))
     });
 	});
 	</script>
