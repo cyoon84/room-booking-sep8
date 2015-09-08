@@ -1,7 +1,7 @@
 {
 	"rooms": [
 		{
-			"room": "A",
+			"room": "Room A",
 			"minCap": 2,
 			"maxCap": 8,
 			"open" : 900,
@@ -11,7 +11,7 @@
 			"projector" : "Y",
 			"whiteBoard" : "Y"
 		}, {
-			"room": "B",
+			"room": "Room B",
 			"minCap": 2,
 			"maxCap": 8,
 			"open" : 900,
@@ -21,7 +21,7 @@
 			"projector" : "Y",
 			"whiteBoard" : "Y"
 		}, {
-			"room": "C",
+			"room": "Room C",
 			"minCap": 1,
 			"maxCap": 4,
 			"open" : 900,
@@ -31,7 +31,7 @@
 			"projector" : "N",
 			"whiteBoard" : "N"
 		}, {
-			"room": "D",
+			"room": "Room D",
 			"minCap": 1,
 			"maxCap": 4,
 			"open" : 900,
@@ -41,7 +41,7 @@
 			"projector" : "N",
 			"whiteBoard" : "N"
 		}, {
-			"room": "E",
+			"room": "Room E",
 			"minCap": 4,
 			"maxCap": 12,
 			"open" : 900,
@@ -51,7 +51,7 @@
 			"projector" : "Y",
 			"whiteBoard" : "N"
 		}, {
-			"room": "F",
+			"room": "Room F",
 			"minCap": 1,
 			"maxCap": 4,
 			"open" : 900,
