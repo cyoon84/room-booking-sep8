@@ -1,0 +1,19 @@
+{
+	"rooms": [
+		{
+			"room": "A",
+			"minCap": 2,
+			"maxCap": 8,
+			"open" : 900,
+			"close": 2100,
+			"minBook" : 30,
+			"maxBook" : 120,
+			"projector" : "Y",
+			"whiteBoard" : "Y",
+		}
+
+
+
+	]
+
+}
