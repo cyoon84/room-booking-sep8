@@ -83,7 +83,7 @@
 			"maxBook" : 720,
 			"projector" : "N",
 			"whiteBoard" : "N",
-			"description" : "This Individual Study Room is available for one person only.  Can be booked all day."
+			"description" : "This Individual Study Room is available for 1 person only.  Can be booked all day."
 		}, {
 			"room": "Room H",
 			"imgurl": "./images/roomH.jpg",
@@ -95,7 +95,7 @@
 			"maxBook" : 720,
 			"projector" : "N",
 			"whiteBoard" : "N",
-			"description" : "This Individual Study Room is available for one person only.  Can be booked all day."
+			"description" : "This Individual Study Room is available for 1 person only.  Can be booked all day."
 		}, {
 			"room": "Room I",
 			"imgurl": "./images/roomI.jpg",
@@ -107,7 +107,7 @@
 			"maxBook" : 720,
 			"projector" : "N",
 			"whiteBoard" : "N",
-			"description" : "This Individual Study Room is available for one person only.  Can be booked all day."
+			"description" : "This Individual Study Room is available for 1 person only.  Can be booked all day."
 		}, {
 			"room": "Room J",
 			"imgurl": "./images/roomJ.jpg",
@@ -119,7 +119,7 @@
 			"maxBook" : 720,
 			"projector" : "N",
 			"whiteBoard" : "N",
-			"description" : "This Individual Study Room is available for one person only.  Can be booked all day."
+			"description" : "This Individual Study Room is available for 1 person only.  Can be booked all day."
 		}
 
 
