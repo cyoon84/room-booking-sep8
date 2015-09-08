@@ -74,7 +74,7 @@
 			"open" : 900,
 			"close": 2100,
 			"minBook" : 30,
-			"maxBook" : 120,
+			"maxBook" : 720,
 			"projector" : "N",
 			"whiteBoard" : "N"
 		}, {
@@ -85,7 +85,7 @@
 			"open" : 900,
 			"close": 2100,
 			"minBook" : 30,
-			"maxBook" : 120,
+			"maxBook" : 720,
 			"projector" : "N",
 			"whiteBoard" : "N"
 		}, {
@@ -96,7 +96,7 @@
 			"open" : 900,
 			"close": 2100,
 			"minBook" : 30,
-			"maxBook" : 120,
+			"maxBook" : 720,
 			"projector" : "N",
 			"whiteBoard" : "N"
 		}, {
@@ -107,7 +107,7 @@
 			"open" : 900,
 			"close": 2100,
 			"minBook" : 30,
-			"maxBook" : 120,
+			"maxBook" : 720,
 			"projector" : "N",
 			"whiteBoard" : "N"
 		}
