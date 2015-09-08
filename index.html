@@ -12,9 +12,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-	<H1>Room BOoking</H1>
+	<H1>Room Booking</H1>
+<div class="container">
+<form class="form-inline" method="get" action="./room-list.html">
 
-<form>
+<div class="form-group>
 <label for="room-capacity">Group Size</label>
 <select id="room-capacity" class="form-control">
   <option>1</option>
@@ -23,21 +25,27 @@
   <option>4</option>
   <option>5</option>
 </select>
+</div>
 
+<div class="form-group">
 <label for="preferred-time">Preferred Time</label>
-<input id=preferred-time" type="datetime" class="form-control" placeholder="Text input">
+<input id=preferred-time" type="datetime" class="form-control" placeholder="1pm">
+</div>
 
+<div class="form-group">
 <label for="duration">Duration</label>
 <select id="duration" class="form-control">
-  <option>30 min</option>
-  <option>1 hour</option>
-  <option>2 hour</option>
-  <option>All day</option>
+  <option val="30">30 min</option>
+  <option val="60">1 hour</option>
+  <option val="120">2 hour</option>
+  <option val="9999">All day</option>
 </select>
+</div>
+
+<button type="submit" class="btn btn-default">Submit</button>
 
 </form>
 
-
+</div>
 </body>
-
 </html>
