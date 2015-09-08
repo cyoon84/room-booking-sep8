@@ -55,7 +55,7 @@
 
 		$.getJSON('https://cyoon84.github.io/room-booking-sep8/rooms.json', function(roomdata){
 		console.log(roomdata);
-    var $panelGroup = $('<div>').addClass('panel-group');
+    var $panelGroup = $('<div>').addClass('panel-group').attr('id', 'room-list-accordion');
 		$.each(roomdata.rooms, function(idx, obj){
       console.log(obj);
 		  $panelGroup.append(
@@ -84,7 +84,7 @@
 		$('#group-size').change(function(event) {
 			var group_selected = parseInt($('#group-size').val());
 			console.log(group_selected);
-			$('#room-list ul').find('li').each(function(){
+			$('#room-list').find('.panel').each(function(){
 				var current_minCap = parseInt($(this).data('minCap'));
 				var current_maxcap = parseInt($(this).data('maxCap'));
 				if (!(group_selected >= current_minCap && group_selected <= current_maxcap)) {
