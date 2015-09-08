@@ -50,18 +50,30 @@
 	<div id="room-list" class="panel-group" role="tablist"></div>
 	</div>
 	<script>
-	$(document).ready(function(){
-		$('#preferred-time').ptTimeSelect();
+    var roomBooking = {};
+    roomBooking.updateList = function(){
+      $('#room-list').find('.panel').each(function(){
+        if (obj.data('hidden-by') == ''){
+          $(this).show();
+        }
+        else{
+          $(this).hide();
+        }
+      });
+    };
+    
+    $(document).ready(function(){
+  		$('#preferred-time').ptTimeSelect();
 
 		$.getJSON('https://cyoon84.github.io/room-booking-sep8/rooms.json', function(roomdata){
-		console.log(roomdata);
     var $panelGroup = $('<div>').addClass('panel-group').attr('id', 'room-list-accordion');
 		$.each(roomdata.rooms, function(idx, obj){
-      console.log(obj);
 		  $panelGroup.append(
 		    	$("<div>").addClass('panel panel-default').
           data("minCap",obj.minCap).
           data("maxCap", obj.maxCap).
+          data("minBook", obj.minBook).
+          data("maxBook", obj.maxBook).
           data("roomName",obj.room).
           append(
             $("<div>").addClass('panel-heading').append(
@@ -95,23 +107,36 @@
 
 		$('#group-size').change(function(event) {
 			var group_selected = parseInt($('#group-size').val());
-			console.log(group_selected);
 			$('#room-list').find('.panel').each(function(){
-				var current_minCap = parseInt($(this).data('minCap'));
-				var current_maxcap = parseInt($(this).data('maxCap'));
-        var $this = $(this);
+        var $this = $(this),
+				    current_minCap = parseInt($this.data('minCap')),
+				    current_maxcap = parseInt($this.data('maxCap'));
+            
 				if (!(group_selected >= current_minCap && group_selected <= current_maxcap)) {
-					$this.css('display','none');
           $this.data('hidden-by', $this.data('hidden-by')+'groupsize');
 				}else{
-          $this.css('display', 'block');
           $this.data('hidden-by', $this.data('hidden-by').replace('groupsize',''));
       	}
       });
+      
+      roomBooking.updateList();
 		});
 
 		$('#duration').change(function(event) {
-			event.preventDefault();
+			var duration_selected = parseInt($('#duration').val());
+			$('#room-list').find('.panel').each(function(){
+        var $this = $(this),
+				    current_minCap = parseInt($this.data('minBook')),
+				    current_maxcap = parseInt($this.data('maxBook'));
+            
+				if (!(duration_selected >= current_minCap && duration_selected <= current_maxcap)) {
+          $this.data('hidden-by', $this.data('hidden-by')+'duration');
+				}else{
+          $this.data('hidden-by', $this.data('hidden-by').replace('duration',''));
+      	}
+      });
+      
+      roomBooking.updateList();
 		});
 		
 	});
