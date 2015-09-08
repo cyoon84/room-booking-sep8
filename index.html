@@ -57,8 +57,10 @@
 	<script>
 	$(document).ready(function(){
 		$.getJSON('./rooms.json', function(roomdata){
+		console.log(roomdata);
 		  var $ul = $('ul').addClass('list-group');
 		  $.each(roomdata.rooms, function(idx, obj){
+		  	console.log(idx + ' : ' + obj);
 		    $ul.append(
 		    	$("<li>").addClass('list-group-item').html(obj.name + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
 		    );
