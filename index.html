@@ -74,7 +74,14 @@
                 }).html(obj.room)
               )
             ),
-            $("<div>").addClass('panel-collapse collapse').html('description')
+            $("<div>").attr({
+            'id' : 'collapse-'+idx,
+            'role': 'tabpanel'
+            }).
+            addClass('panel-collapse collapse in').
+            append(
+             $('<div>').addClass('panel-body').html('add a full description here.')
+            )
           )  
 		    );
 		  });
@@ -101,6 +108,7 @@
 		
     $('#room-list').on('click', '.list-group-item', function(evt){
       //alert('show details of room ' + $(this).data('roomName'))
+      
     });
 	});
 	</script>
