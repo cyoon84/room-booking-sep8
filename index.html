@@ -59,29 +59,28 @@
 		  $.each(roomdata.rooms, function(idx, obj){
 		  	console.log(obj);
 		    $ul.append(
-		    	$("<li>").addClass('list-group-item').html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
+		    	$("<li>").addClass('list-group-item').html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap).data("minCap",obj.minCap).data("maxCap", obj.maxCap).data("roomName",obj.room)
 		    );
 		  });
 		  $("#room-list").append($ul);
 		});
 
 		$('#group-size').change(function(event) {
-			$('#room-list').html("");
-			$.getJSON('https://cyoon84.github.io/room-booking-sep8/rooms.json', function(roomdata){
-			var selected = $('#group-size').val();
-			  var $ul = $('<ul>').addClass('list-group');
-			  $.each(roomdata.rooms, function(idx, obj){
-			  	console.log(this.val);
-			  	if (selected >= obj.minCap && selected <= obj.maxCap) {
-				    $ul.append(
-				    	
-				    		$("<li>").addClass('list-group-item').html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
-				    );
+			var group_selected = parseInt($('#group-size').val());
+			console.log(group_selected);
+			$('#room-list ul').find('li').each(function(){
+				var current_minCap = parseInt($(this).data('minCap'));
+				var current_maxcap = parseInt($(this).data('maxCap'));
+				if (!(group_selected >= current_minCap && group_selected <= current_maxcap)) {
+					$(this).css('display','none');
 				}
-			  });
-			  $("#room-list").append($ul);
 			});
 
+		});
+
+		$('#duration').change(function(event) {
+
+			event.preventDefault();
 		});
 		
 	});
