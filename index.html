@@ -53,11 +53,12 @@
     var roomBooking = {};
     roomBooking.updateList = function(){
       $('#room-list').find('.panel').each(function(){
-        if (obj.data('hidden-by') == ''){
-          $(this).show();
+        var $this = $(this);
+        if ($this.data('hidden-by') == ''){
+          $this.show();
         }
         else{
-          $(this).hide();
+          $this.hide();
         }
       });
     };
