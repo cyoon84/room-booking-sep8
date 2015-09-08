@@ -20,8 +20,8 @@
 		<form class="form-inline" method="get" action="./room-list.html">
 
 		<div class="form-group">
-		<label for="room-capacity">Group Size</label>
-		<select id="room-capacity" class="form-control">
+		<label for="group-size">Group Size</label>
+		<select id="group-size" class="form-control" required="required">
 		  <option>1</option>
 		  <option>2</option>
 		  <option>3</option>
@@ -62,11 +62,19 @@
 		  $.each(roomdata.rooms, function(idx, obj){
 		  	console.log(obj);
 		    $ul.append(
-		    	$("<li>").addClass('list-group-item').html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
+		    	$("<li>").addClass('list-group-item').html(obj.room);
 		    );
 		  });
 		  $("#room-list").append($ul);
 		});
+		
+		$('#preferred-time').on('change', function(evt){
+		});
+		$('#duration').on('change', function(evt){
+		});
+		$('#group-size').on('change'), function(evt){
+		});
+		
 	});
 	</script>
 </div>
