@@ -96,9 +96,10 @@
 				var current_maxcap = parseInt($(this).data('maxCap'));
 				if (!(group_selected >= current_minCap && group_selected <= current_maxcap)) {
 					$(this).css('display','none');
-				}
-			});
-
+				}else{
+          $(this).css('display', 'block');
+      	}
+      });
 		});
 
 		$('#duration').change(function(event) {
