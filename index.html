@@ -127,13 +127,13 @@
 
 		$('#duration').change(function(event) {
 			var duration_selected = parseInt($('#duration').val());
-      console.log(duration_selected);
+      //console.log(duration_selected);
 			$('#room-list').find('.panel').each(function(){
         var $this = $(this),
 				    current_minCap = parseInt($this.data('minBook')),
 				    current_maxcap = parseInt($this.data('maxBook'));
 
-        console.log(duration_selected + ',' + current_minCap + ',' + current_maxcap);
+        //console.log(duration_selected + ',' + current_minCap + ',' + current_maxcap);
 				if (!(duration_selected >= current_minCap && duration_selected <= current_maxcap)) {
           $this.data('hidden-by', $this.data('hidden-by')+':duration:');
 				}else{
