@@ -52,7 +52,7 @@
 			"open" : 900,
 			"close": 2100,
 			"minBook" : 30,
-			"maxBook" : 480,
+			"maxBook" : 240,
 			"projector" : "Y",
 			"whiteBoard" : "N"
 		}, {
