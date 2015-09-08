@@ -99,10 +99,13 @@
 			$('#room-list').find('.panel').each(function(){
 				var current_minCap = parseInt($(this).data('minCap'));
 				var current_maxcap = parseInt($(this).data('maxCap'));
+        var $this = $(this);
 				if (!(group_selected >= current_minCap && group_selected <= current_maxcap)) {
-					$(this).css('display','none');
+					$this.css('display','none');
+          $this.data('hidden-by', $this.data('hidden-by')+'groupsize');
 				}else{
-          $(this).css('display', 'block');
+          $this.css('display', 'block');
+          $this.data('hidden-by', $this.data('hidden-by').replace('groupsize',''));
       	}
       });
 		});
