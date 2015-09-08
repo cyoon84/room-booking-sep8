@@ -70,7 +70,7 @@
 			"minBook" : 30,
 			"maxBook" : 120,
 			"projector" : "N",
-			"whiteBoard" : "Y,
+			"whiteBoard" : "Y",
 			"description" : "This Group Study Room is available for groups of 1-4 people.  Can only be booked for up to 2 hours at a time. Electronic Whiteboard available."
 		}, {
 			"room": "Room G",
