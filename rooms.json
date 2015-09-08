@@ -9,7 +9,7 @@
 			"minBook" : 30,
 			"maxBook" : 120,
 			"projector" : "Y",
-			"whiteBoard" : "Y",
+			"whiteBoard" : "Y"
 		}, {
 			"room": "B",
 			"minCap": 2,
@@ -19,7 +19,7 @@
 			"minBook" : 30,
 			"maxBook" : 120,
 			"projector" : "Y",
-			"whiteBoard" : "Y",
+			"whiteBoard" : "Y"
 		}, {
 			"room": "C",
 			"minCap": 1,
@@ -29,7 +29,7 @@
 			"minBook" : 30,
 			"maxBook" : 120,
 			"projector" : "N",
-			"whiteBoard" : "N",
+			"whiteBoard" : "N"
 		}, {
 			"room": "D",
 			"minCap": 1,
@@ -39,7 +39,7 @@
 			"minBook" : 30,
 			"maxBook" : 120,
 			"projector" : "N",
-			"whiteBoard" : "N",
+			"whiteBoard" : "N"
 		}, {
 			"room": "E",
 			"minCap": 4,
@@ -49,7 +49,7 @@
 			"minBook" : 30,
 			"maxBook" : 480,
 			"projector" : "Y",
-			"whiteBoard" : "N",
+			"whiteBoard" : "N"
 		}, {
 			"room": "F",
 			"minCap": 1,
@@ -59,7 +59,7 @@
 			"minBook" : 30,
 			"maxBook" : 120,
 			"projector" : "N",
-			"whiteBoard" : "Y",
+			"whiteBoard" : "Y"
 		}
 
 
