@@ -62,7 +62,7 @@
 		  $.each(roomdata.rooms, function(idx, obj){
 		  	console.log(obj);
 		    $ul.append(
-		    	$("<li>").addClass('list-group-item').html(obj.room);
+		    	$("<li>").addClass('list-group-item').attr('id', 'room-'+idx).html(obj.room);
 		    );
 		  });
 		  $("#room-list").append($ul);
