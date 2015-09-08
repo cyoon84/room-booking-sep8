@@ -7,7 +7,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <!-- Latest compiled and minified JavaScript -->
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="jquery.ptTimeSelect.css">
@@ -22,22 +22,17 @@
 		<div class="form-group">
 		<label for="group-size">Group Size</label>
 		<select id="group-size" class="form-control" required="required">
-		  <option>1</option>
-		  <option>2</option>
-		  <option>3</option>
-		  <option>4</option>
-		  <option>5</option>
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
 		</select>
 		</div>
 
 		<div class="form-group">
 		<label for="preferred-time">Preferred Time</label>
 		<input id="preferred-time" type="text" class="form-control">
-		<script type="text/javascript">
-    $(document).ready(function(){
-        $('#preferred-time').ptTimeSelect();
-    });
-</script>
 		</div>
 
 		<div class="form-group">
@@ -56,23 +51,37 @@
 	</div>
 	<script>
 	$(document).ready(function(){
-		$.getJSON('./rooms.json', function(roomdata){
+		$('#preferred-time').ptTimeSelect();
+
+		$.getJSON('https://cyoon84.github.io/room-booking-sep8/rooms.json', function(roomdata){
 		console.log(roomdata);
 		  var $ul = $('<ul>').addClass('list-group');
 		  $.each(roomdata.rooms, function(idx, obj){
 		  	console.log(obj);
 		    $ul.append(
-		    	$("<li>").addClass('list-group-item').html(obj.room);
+		    	$("<li>").addClass('list-group-item').html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
 		    );
 		  });
 		  $("#room-list").append($ul);
 		});
-		
-		$('#preferred-time').on('change', function(evt){
-		});
-		$('#duration').on('change', function(evt){
-		});
-		$('#group-size').on('change'), function(evt){
+
+		$('#group-size').change(function(event) {
+			$('#room-list').html("");
+			$.getJSON('https://cyoon84.github.io/room-booking-sep8/rooms.json', function(roomdata){
+			var selected = $('#group-size').val();
+			  var $ul = $('<ul>').addClass('list-group');
+			  $.each(roomdata.rooms, function(idx, obj){
+			  	console.log(this.val);
+			  	if (selected >= obj.minCap && selected <= obj.maxCap) {
+				    $ul.append(
+				    	
+				    		$("<li>").addClass('list-group-item').html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
+				    );
+				}
+			  });
+			  $("#room-list").append($ul);
+			});
+
 		});
 		
 	});
