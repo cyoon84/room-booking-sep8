@@ -2,6 +2,7 @@
 	"rooms": [
 		{
 			"room": "Room A",
+			"imgurl": "./images/roomA.jpg"
 			"minCap": 2,
 			"maxCap": 8,
 			"open" : 900,
@@ -12,6 +13,7 @@
 			"whiteBoard" : "Y"
 		}, {
 			"room": "Room B",
+			"imgurl": "./images/roomB.jpg"
 			"minCap": 2,
 			"maxCap": 8,
 			"open" : 900,
@@ -22,6 +24,7 @@
 			"whiteBoard" : "Y"
 		}, {
 			"room": "Room C",
+			"imgurl": "./images/roomC.jpg"
 			"minCap": 1,
 			"maxCap": 4,
 			"open" : 900,
@@ -32,6 +35,7 @@
 			"whiteBoard" : "N"
 		}, {
 			"room": "Room D",
+			"imgurl": "./images/roomD.jpg"
 			"minCap": 1,
 			"maxCap": 4,
 			"open" : 900,
@@ -42,6 +46,7 @@
 			"whiteBoard" : "N"
 		}, {
 			"room": "Room E",
+			"imgurl": "./images/roomE.jpg"
 			"minCap": 4,
 			"maxCap": 12,
 			"open" : 900,
@@ -52,6 +57,7 @@
 			"whiteBoard" : "N"
 		}, {
 			"room": "Room F",
+			"imgurl": "./images/roomF.jpg"
 			"minCap": 1,
 			"maxCap": 4,
 			"open" : 900,
