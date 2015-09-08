@@ -68,7 +68,7 @@
 			"whiteBoard" : "Y"
 		}, {
 			"room": "Room G",
-			"imgurl": "./images/roomF.jpg",
+			"imgurl": "./images/roomG.jpg",
 			"minCap": 1,
 			"maxCap": 1,
 			"open" : 900,
@@ -79,7 +79,7 @@
 			"whiteBoard" : "N"
 		}, {
 			"room": "Room H",
-			"imgurl": "./images/roomF.jpg",
+			"imgurl": "./images/roomH.jpg",
 			"minCap": 1,
 			"maxCap": 1,
 			"open" : 900,
@@ -90,7 +90,7 @@
 			"whiteBoard" : "N"
 		}, {
 			"room": "Room I",
-			"imgurl": "./images/roomF.jpg",
+			"imgurl": "./images/roomI.jpg",
 			"minCap": 1,
 			"maxCap": 1,
 			"open" : 900,
@@ -101,7 +101,7 @@
 			"whiteBoard" : "N"
 		}, {
 			"room": "Room J",
-			"imgurl": "./images/roomF.jpg",
+			"imgurl": "./images/roomJ.jpg",
 			"minCap": 1,
 			"maxCap": 1,
 			"open" : 900,
