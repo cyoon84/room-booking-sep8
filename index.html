@@ -75,7 +75,7 @@
 			  	if (selected >= obj.minCap && selected <= obj.maxCap) {
 				    $ul.append(
 				    	
-				    		$("<li>").addClass('list-group-item').html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
+				    		$("<li>").addClass('list-group-item').data(room, obj.room).html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
 				    );
 				}
 			  });
