@@ -62,7 +62,7 @@
 		  $.each(roomdata.rooms, function(idx, obj){
 		  	console.log(obj);
 		    $ul.append(
-		    	$("<li>").addClass('list-group-item').html(obj.name + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
+		    	$("<li>").addClass('list-group-item').html(obj.room + ', min: ' + obj.minCap + ', max:' + obj.maxCap)
 		    );
 		  });
 		  $("#room-list").append($ul);
