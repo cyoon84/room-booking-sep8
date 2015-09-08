@@ -116,9 +116,9 @@
 				    current_maxcap = parseInt($this.data('maxCap'));
             
 				if (!(group_selected >= current_minCap && group_selected <= current_maxcap)) {
-          $this.data('hidden-by', $this.data('hidden-by')+'groupsize');
+          $this.data('hidden-by', $this.data('hidden-by')+':groupsize:');
 				}else{
-          $this.data('hidden-by', $this.data('hidden-by').replace('groupsize',''));
+          $this.data('hidden-by', $this.data('hidden-by').replace(':groupsize:',''));
       	}
       });
       
@@ -133,9 +133,9 @@
 				    current_maxcap = parseInt($this.data('maxBook'));
             
 				if (!(duration_selected >= current_minCap && duration_selected <= current_maxcap)) {
-          $this.data('hidden-by', $this.data('hidden-by')+'duration');
+          $this.data('hidden-by', $this.data('hidden-by')+':duration:');
 				}else{
-          $this.data('hidden-by', $this.data('hidden-by').replace('duration',''));
+          $this.data('hidden-by', $this.data('hidden-by').replace(':duration:',''));
       	}
       });
       
