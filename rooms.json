@@ -56,7 +56,7 @@
 			"open" : 900,
 			"close": 2100,
 			"minBook" : 30,
-			"maxBook" : 240,
+			"maxBook" : 60,
 			"projector" : "Y",
 			"whiteBoard" : "N" ,
 			"description" : "This Group Study Room is available for groups of 4-12 people.  Can be booked for up to 4 hours at a time. Projector available"
@@ -68,13 +68,13 @@
 			"open" : 900,
 			"close": 2100,
 			"minBook" : 30,
-			"maxBook" : 120,
+			"maxBook" : 60,
 			"projector" : "N",
 			"whiteBoard" : "Y",
 			"description" : "This Group Study Room is available for groups of 1-4 people.  Can only be booked for up to 2 hours at a time. Electronic Whiteboard available."
 		}, {
 			"room": "Room G",
-			"imgurl": "./images/roomG.jpg",
+			"imgurl": "./images/roomA.jpg",
 			"minCap": 1,
 			"maxCap": 1,
 			"open" : 900,
@@ -86,7 +86,7 @@
 			"description" : "This Individual Study Room is available for 1 person only.  Can be booked all day."
 		}, {
 			"room": "Room H",
-			"imgurl": "./images/roomH.jpg",
+			"imgurl": "./images/roomB.jpg",
 			"minCap": 1,
 			"maxCap": 1,
 			"open" : 900,
@@ -98,7 +98,7 @@
 			"description" : "This Individual Study Room is available for 1 person only.  Can be booked all day."
 		}, {
 			"room": "Room I",
-			"imgurl": "./images/roomI.jpg",
+			"imgurl": "./images/roomC.jpg",
 			"minCap": 1,
 			"maxCap": 1,
 			"open" : 900,
@@ -110,7 +110,7 @@
 			"description" : "This Individual Study Room is available for 1 person only.  Can be booked all day."
 		}, {
 			"room": "Room J",
-			"imgurl": "./images/roomJ.jpg",
+			"imgurl": "./images/roomD.jpg",
 			"minCap": 1,
 			"maxCap": 1,
 			"open" : 900,
