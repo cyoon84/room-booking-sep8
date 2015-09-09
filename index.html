@@ -97,11 +97,17 @@
             addClass('panel-collapse collapse').
             append(
              $('<div>').addClass('panel-body').append(
-               ())
                $("<img>").attr({
                  'src' : obj.imgurl
-               }),
-               $("<div>").html(obj.description)
+               }).css('float', 'left'),
+               $("<div>").html(obj.description),
+               $("<div>").append(
+                 $("<a>").attr({
+                   "role" : "button",
+                   "class" : "btn btn-primary"
+                   "href" : "#"
+                 }).html("Book this room")
+               )
              )
             )
           )  
