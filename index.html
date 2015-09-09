@@ -50,7 +50,7 @@
 	<div id="room-list" class="panel-group" role="tablist"></div>
 	</div>
 	<script>
-    var roomBooking = {};
+    var roomBooking = sessionStorage.roomBooking = {};
     roomBooking.updateList = function(){
       $('#room-list').find('.panel').each(function(){
         var $this = $(this);
@@ -64,9 +64,10 @@
     };
     
     $(document).ready(function(){
-  		$('#preferred-time').ptTimeSelect();
+ 		$('#preferred-time').ptTimeSelect();
 
 		$.getJSON('https://cyoon84.github.io/room-booking-sep8/rooms.json', function(roomdata){
+    roomBooking.roomListJSON = roomdata;
     var $panelGroup = $('<div>').addClass('panel-group').attr('id', 'room-list-accordion');
 		$.each(roomdata.rooms, function(idx, obj){
 		  $panelGroup.append(
@@ -96,6 +97,7 @@
             addClass('panel-collapse collapse').
             append(
              $('<div>').addClass('panel-body').append(
+               ())
                $("<img>").attr({
                  'src' : obj.imgurl
                }),
