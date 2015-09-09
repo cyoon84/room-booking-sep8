@@ -99,9 +99,12 @@
              $('<div>').addClass('panel-body').append(
                $("<img>").attr({
                  'src' : obj.imgurl
-               }).css('float', 'left'),
-               $("<div>").html(obj.description),
-               $("<div>").append(
+               }).css({
+                 'float': 'left',
+                 'margin' : '0.4em'
+               }),
+               $("<p>").html(obj.description),
+               $("<p>").append(
                  $("<a>").attr({
                    "role" : "button",
                    "class" : "btn btn-primary",
